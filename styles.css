@@ -1,0 +1,301 @@
+/* Left arrow button at far left bottom */
+.arrow-button-left-bottom {
+	position: fixed;
+	left: 1rem;
+	bottom: 3rem;
+	z-index: 30;
+	display: flex;
+	justify-content: center;
+}
+.arrow-button-left-bottom .exit-button {
+	padding: 0.3rem 0.7rem;
+}
+.arrow-button-right-bottom .exit-button {
+	padding: 0.3rem 0.7rem;
+}
+/* Right arrow button at bottom left */
+.arrow-button-right-bottom {
+	position: fixed;
+	left: 5rem;
+	bottom: 3rem;
+	z-index: 30;
+	display: flex;
+	justify-content: center;
+}
+/* Up arrow button on the left side (game page) */
+.arrow-button-left {
+	position: fixed;
+	left: 2rem;
+	top: 80%;
+	transform: translateY(-50%);
+	z-index: 30;
+	}
+	.arrow-button-left .exit-button {
+		padding: 0.7rem 1.2rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+/* Up arrow at left bottom */
+	position: fixed;
+	left: 8rem;
+	bottom: 8rem;
+	z-index: 20;
+	background: rgba(37,99,235,0.12);
+	border-radius: 1.5rem;
+	padding: 0.5rem 0.7rem 0.2rem 0.7rem;
+	box-shadow: 2px 2px 0 #222, 4px 4px 0 #2563eb44;
+	display: flex;
+	align-items: flex-end;
+}
+.arrow-up-left {
+	position: fixed;
+	right: 3rem;
+	bottom: 3rem;
+	z-index: 100;
+	background: rgba(37,99,235,0.12);
+	border-radius: 1.5rem;
+	padding: 0.5rem 0.7rem 0.2rem 0.7rem;
+	box-shadow: 2px 2px 0 #222, 4px 4px 0 #2563eb44;
+	display: flex;
+	align-items: flex-end;
+}
+	color: #93c5fd;
+	opacity: 0.8;
+	z-index: 10;
+	letter-spacing: 0.03em;
+}
+.play-again-button {
+	display: inline-block;
+	padding: 0.8rem 2.2rem;
+	background: #60a5fa;
+	color: #fff;
+	border-radius: 0.7rem;
+	font-family: 'Press Start 2P', cursive, sans-serif;
+	font-size: 1.1rem;
+	text-shadow: 2px 2px 0 #2563eb, 4px 4px 0 #222;
+	letter-spacing: 0.05em;
+	box-shadow: 2px 2px 0 #222, 4px 4px 0 #2563eb44;
+	border: none;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	transition: background 0.2s, transform 0.1s;
+}
+.play-again-button:hover, .play-again-button:focus {
+	background: #93c5fd;
+	color: #2563eb;
+	transform: translateY(-2px) scale(1.04);
+}
+/* Play again text on page 3 */
+.play-again-text {
+	display: flex;
+	justify-content: center;
+	margin-top: 2.5rem;
+}
+.play-again-text span {
+	display: inline-block;
+	padding: 0.8rem 2.2rem;
+	background: #60a5fa;
+	color: #fff;
+	border-radius: 0.7rem;
+	font-family: 'Press Start 2P', cursive, sans-serif;
+	font-size: 1.1rem;
+	text-shadow: 2px 2px 0 #2563eb, 4px 4px 0 #222;
+	letter-spacing: 0.05em;
+	box-shadow: 2px 2px 0 #222, 4px 4px 0 #2563eb44;
+	border: none;
+	text-align: center;
+}
+.exit-button {
+	display: inline-block;
+	padding: 0.8rem 2.2rem;
+	background: #60a5fa;
+	color: #fff;
+	border-radius: 0.7rem;
+	font-family: 'Press Start 2P', cursive, sans-serif;
+	font-size: 1.1rem;
+	text-shadow: 2px 2px 0 #2563eb, 4px 4px 0 #222;
+	letter-spacing: 0.05em;
+	box-shadow: 2px 2px 0 #222, 4px 4px 0 #2563eb44;
+	border: none;
+	text-decoration: none;
+	text-align: center;
+	cursor: pointer;
+	transition: background 0.2s, transform 0.1s;
+}
+.exit-button:hover, .exit-button:focus {
+	background: #93c5fd;
+	color: #2563eb;
+	transform: translateY(-2px) scale(1.04);
+}
+/* EXIT text at the bottom center */
+.exit-text {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 5.5rem;
+	display: flex;
+	justify-content: center;
+	z-index: 10;
+}
+.exit-text span {
+	display: inline-block;
+	padding: 0.8rem 2.2rem;
+	background: #60a5fa;
+	color: #fff;
+	border-radius: 0.7rem;
+	font-family: 'Press Start 2P', cursive, sans-serif;
+	font-size: 1.1rem;
+	text-shadow: 2px 2px 0 #2563eb, 4px 4px 0 #222;
+	letter-spacing: 0.05em;
+	box-shadow: 2px 2px 0 #222, 4px 4px 0 #2563eb44;
+	border: none;
+}
+/* Sun in the middle top */
+.sun-top-center {
+	position: fixed;
+	left: 50%;
+	top: 0.5rem;
+	transform: translateX(-50%);
+	z-index: 4;
+	pointer-events: none;
+}
+/* Second, bigger tree beside the first */
+.tree-left-big {
+	position: fixed;
+	left: 3.5rem;
+	bottom: 47vh;
+	z-index: 3;
+	pointer-events: none;
+}
+/* Tree on the far left */
+.tree-left {
+	position: fixed;
+	left: 0.5rem;
+	bottom: 47vh;
+	z-index: 3;
+	pointer-events: none;
+}
+/* Clouds in the top corners */
+.cloud {
+	position: fixed;
+	top: 1.5rem;
+	z-index: 4;
+	pointer-events: none;
+}
+.cloud-left {
+	left: 1.5rem;
+}
+.cloud-right {
+	right: 1.5rem;
+}
+/* Grass tips overlay at the top of the green section */
+.grass-tips {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 47vh;
+	z-index: 2;
+	pointer-events: none;
+	width: 100vw;
+	height: 48px;
+	overflow: visible;
+}
+html, body {
+	height: 100%;
+}
+
+.center {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.cat-wrap {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+/* Make the cat SVG smaller */
+.pixel-cat {
+	width: 240px;
+	height: 160px;
+	display: block;
+	margin: 0 auto;
+	position: relative;
+	z-index: 3;
+}
+.title {
+	position: relative;
+	z-index: 1;
+	margin-bottom: 4rem;
+}
+
+.title::before {
+	content: '';
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%) scale(1.1, 1.2);
+	width: 110%;
+	height: 90%;
+	background: linear-gradient(120deg, rgba(255,255,255,0.18) 30%, rgba(255,255,255,0.38) 50%, rgba(255,255,255,0.18) 70%);
+	border-radius: 0.4em;
+	filter: blur(2.5px);
+	opacity: 0.7;
+	z-index: -1;
+	animation: flash-effect 2.2s linear infinite;
+}
+
+@keyframes flash-effect {
+	0% { opacity: 0.7; filter: blur(2.5px); }
+	40% { opacity: 1; filter: blur(3.5px); }
+	60% { opacity: 1; filter: blur(3.5px); }
+	100% { opacity: 0.7; filter: blur(2.5px); }
+}
+/* Center the play button under the cat and style it with the same font as the title */
+.play-wrap {
+	display: flex;
+	justify-content: center;
+	margin-top: 1.5rem;
+}
+
+.play-button {
+	font-family: 'Press Start 2P', cursive, sans-serif;
+	font-size: 1.1rem;
+	background: #60a5fa;
+	color: #fff;
+	padding: 0.8rem 2.2rem;
+	border: none;
+	border-radius: 0.7rem;
+	text-decoration: none;
+	box-shadow: 2px 2px 0 #222, 4px 4px 0 #2563eb44;
+	transition: background 0.2s, transform 0.1s;
+	letter-spacing: 0.05em;
+	text-align: center;
+	cursor: pointer;
+}
+
+.play-button:hover, .play-button:focus {
+	background: #93c5fd;
+	color: #2563eb;
+	transform: translateY(-2px) scale(1.04);
+}
+/* Mario-like pixeled font for the title */
+.title {
+	font-family: 'Press Start 2P', cursive, sans-serif;
+	font-size: 2.5rem;
+	color: #fff;
+	text-shadow: 2px 2px 0 #222, 4px 4px 0 #2563eb;
+	margin-top: 2rem;
+}
+body {
+	min-height: 100vh;
+	margin: 0;
+	background:
+		linear-gradient(to top, #34d399 0 50%, transparent 50% 100%), /* green bottom half */
+		linear-gradient(to top, #2563eb 50%, #93c5fd 100%); /* blue top half */
+}

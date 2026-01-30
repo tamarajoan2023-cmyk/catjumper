@@ -1,0 +1,230 @@
+ </main>
+	 <div class="exit-text"><a href="page3.html" class="exit-button" role="button" aria-label="Exit">EXIT</a></div>
+ </body>
+ </html>
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>CATJUMPER - Game</title>
+	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+	<script>
+		   document.addEventListener('DOMContentLoaded', function () {
+			   const cat = document.querySelector('.pixel-cat');
+			   let jumping = false;
+			   let jumpHeight = 80; // pixels
+			   let jumpDuration = 350; // ms
+			   let catX = 0; // horizontal position in px
+			   let moveStep = 30; // px per arrow key press
+			   let minX = -200; // left bound
+			   let maxX = 200; // right bound
+
+			   function jumpCat() {
+				   if (!jumping) {
+					   jumping = true;
+					   cat.style.transform = `translate(${catX}px, -${jumpHeight}px)`;
+					   setTimeout(() => {
+						   cat.style.transform = `translate(${catX}px, 0)`;
+						   setTimeout(() => { jumping = false; }, jumpDuration / 2);
+					   }, jumpDuration / 2);
+				   }
+			   }
+
+			   if (cat) {
+				   // Set up initial transform
+				   cat.style.transition = `transform ${jumpDuration / 2}ms cubic-bezier(.4,0,.2,1)`;
+				   cat.style.transform = 'translate(0, 0)';
+
+				   document.addEventListener('keydown', function (e) {
+					   if (e.code === 'Space' || e.code === 'ArrowUp') {
+						   jumpCat();
+					   } else if (e.code === 'ArrowLeft') {
+						   catX = Math.max(catX - moveStep, minX);
+						   cat.style.transform = `translate(${catX}px, 0)`;
+					   } else if (e.code === 'ArrowRight') {
+						   catX = Math.min(catX + moveStep, maxX);
+						   cat.style.transform = `translate(${catX}px, 0)`;
+					   }
+				   });
+
+				   // Up arrow button click triggers jump
+				   const jumpBtn = document.getElementById('jump-arrow-btn');
+				   if (jumpBtn) {
+					   jumpBtn.addEventListener('click', function(e) {
+						   e.preventDefault();
+						   jumpCat();
+					   });
+				   }
+
+				   // Right arrow button click moves cat right
+				   const rightBtn = document.getElementById('right-arrow-btn');
+				   if (rightBtn) {
+					   rightBtn.addEventListener('click', function(e) {
+						   e.preventDefault();
+						   catX = Math.min(catX + moveStep, maxX);
+						   cat.style.transform = `translate(${catX}px, 0)`;
+					   });
+				   }
+				   // Left arrow button click moves cat left
+				   const leftBtn = document.getElementById('left-arrow-btn');
+				   if (leftBtn) {
+					   leftBtn.addEventListener('click', function(e) {
+						   e.preventDefault();
+						   catX = Math.max(catX - moveStep, minX);
+						   cat.style.transform = `translate(${catX}px, 0)`;
+					   });
+				   }
+			   }
+		   });
+	</script>
+</head>
+<body>
+	<!-- Up arrow button on the left side -->
+	<div class="arrow-button-left">
+		<button class="exit-button" id="jump-arrow-btn" aria-label="Up">
+			<svg width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;">
+				<polygon points="14,5 25,23 3,23" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+			</svg>
+		</button>
+	</div>
+	<!-- Left arrow button at far left bottom -->
+	<div class="arrow-button-left-bottom">
+		<button class="exit-button" id="left-arrow-btn" aria-label="Left">
+			<svg width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;">
+				<polygon points="23,3 5,14 23,25" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+			</svg>
+		</button>
+	</div>
+	<!-- Right arrow button at bottom left -->
+	<div class="arrow-button-right-bottom">
+		<button class="exit-button" id="right-arrow-btn" aria-label="Right">
+			<svg width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;">
+				<polygon points="5,3 23,14 5,25" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+			</svg>
+		</button>
+	</div>
+	<main class="center">
+		<!-- Sun in the middle top -->
+		<div class="sun-top-center">
+			<svg viewBox="0 0 60 60" width="80" height="80" xmlns="http://www.w3.org/2000/svg">
+				<circle cx="30" cy="30" r="18" fill="#fde047"/>
+				<g stroke="#fde047" stroke-width="4">
+					<line x1="30" y1="2" x2="30" y2="16"/>
+					<line x1="30" y1="44" x2="30" y2="58"/>
+					<line x1="2" y1="30" x2="16" y2="30"/>
+					<line x1="44" y1="30" x2="58" y2="30"/>
+					<line x1="12" y1="12" x2="21" y2="21"/>
+					<line x1="48" y1="12" x2="39" y2="21"/>
+					<line x1="12" y1="48" x2="21" y2="39"/>
+					<line x1="48" y1="48" x2="39" y2="39"/>
+				</g>
+			</svg>
+		</div>
+		<!-- Second, bigger tree beside the first -->
+		<div class="tree-left-big">
+			<svg viewBox="0 0 60 180" width="90" height="270" xmlns="http://www.w3.org/2000/svg">
+				<rect x="26" y="110" width="12" height="60" fill="#7c4a1e"/>
+				<ellipse cx="32" cy="130" rx="28" ry="28" fill="#22c55e"/>
+				<ellipse cx="32" cy="90" rx="22" ry="22" fill="#16a34a"/>
+				<ellipse cx="32" cy="52" rx="16" ry="16" fill="#166534"/>
+			</svg>
+		</div>
+		<!-- Tree on the far left -->
+		<div class="tree-left">
+			<svg viewBox="0 0 40 120" width="60" height="180" xmlns="http://www.w3.org/2000/svg">
+				<rect x="16" y="70" width="8" height="40" fill="#8b5c2a"/>
+				<ellipse cx="20" cy="80" rx="18" ry="18" fill="#34d399"/>
+				<ellipse cx="20" cy="55" rx="15" ry="15" fill="#10b981"/>
+				<ellipse cx="20" cy="32" rx="12" ry="12" fill="#059669"/>
+			</svg>
+		</div>
+		<!-- Clouds overlay -->
+		<div class="cloud cloud-left">
+			<svg viewBox="0 0 60 28" width="90" height="42" xmlns="http://www.w3.org/2000/svg">
+				<ellipse cx="18" cy="22" rx="18" ry="10" fill="#fff"/>
+				<ellipse cx="36" cy="16" rx="16" ry="12" fill="#fff"/>
+				<ellipse cx="50" cy="22" rx="10" ry="8" fill="#fff"/>
+			</svg>
+		</div>
+		document.addEventListener('DOMContentLoaded', function () {
+			const counter = document.querySelector('.counter');
+			let count = 1;
+		<!-- Grass tips overlay -->
+		</div>
+		<div class="cloud cloud-right">
+			<svg viewBox="0 0 60 28" width="90" height="42" xmlns="http://www.w3.org/2000/svg">
+				<ellipse cx="18" cy="22" rx="18" ry="10" fill="#fff"/>
+				<ellipse cx="36" cy="16" rx="16" ry="12" fill="#fff"/>
+				<ellipse cx="50" cy="22" rx="10" ry="8" fill="#fff"/>
+			</svg>
+		</div>
+			 <main class="center" style="overflow: visible;">
+			   <div class="cat-wrap">
+				   <svg class="pixel-cat" viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
+					<!-- Tail -->
+					<ellipse cx="100" cy="60" rx="18" ry="6" fill="#b0b6bb" transform="rotate(-20 100 60)"/>
+					<!-- Tail stripes -->
+					<path d="M90 60 Q95 58 100 60" stroke="#6c6f73" stroke-width="2" fill="none"/>
+					<path d="M105 62 Q110 64 115 60" stroke="#6c6f73" stroke-width="2" fill="none"/>
+					<!-- Body -->
+					<ellipse cx="60" cy="50" rx="35" ry="22" fill="#d3d7db"/>
+					<!-- Body stripes -->
+					<path d="M45 45 Q60 40 75 45" stroke="#6c6f73" stroke-width="3" fill="none"/>
+					<path d="M50 55 Q60 50 70 55" stroke="#6c6f73" stroke-width="2" fill="none"/>
+					<path d="M55 65 Q60 60 65 65" stroke="#6c6f73" stroke-width="2" fill="none"/>
+					<!-- Back leg -->
+					<ellipse cx="85" cy="70" rx="10" ry="6" fill="#b0b6bb"/>
+					<!-- Front leg -->
+					<ellipse cx="45" cy="72" rx="8" ry="5" fill="#b0b6bb"/>
+					<!-- Head -->
+					<ellipse cx="35" cy="35" rx="18" ry="15" fill="#d3d7db"/>
+					<!-- Head stripes -->
+					<path d="M28 28 Q35 25 42 28" stroke="#6c6f73" stroke-width="2" fill="none"/>
+					<path d="M32 34 Q35 32 38 34" stroke="#6c6f73" stroke-width="1.5" fill="none"/>
+					<!-- Left ear -->
+					<polygon points="22,25 28,10 34,28" fill="#b0b6bb"/>
+					<!-- Right ear -->
+					<polygon points="48,25 42,10 36,28" fill="#b0b6bb"/>
+					<!-- Eyes -->
+					<ellipse cx="30" cy="36" rx="2.2" ry="3" fill="#222"/>
+					<ellipse cx="40" cy="36" rx="2.2" ry="3" fill="#222"/>
+					<!-- Nose -->
+					<ellipse cx="35" cy="42" rx="1.2" ry="1" fill="#c94"/>
+					<!-- Mouth -->
+					<path d="M34 44 Q35 46 36 44" stroke="#c94" stroke-width="1" fill="none"/>
+					<!-- Whiskers -->
+					/* Arrow button group for left side (game page) */
+					.arrow-button-group {
+						position: fixed;
+						left: 8rem;
+						top: 70%;
+						transform: translateY(-50%);
+						z-index: 30;
+						display: flex;
+						flex-direction: column;
+						gap: 1.2rem;
+					}
+					.arrow-button-left, .arrow-button-right {
+						display: flex;
+						justify-content: center;
+					}
+					<path d="M28 42 Q24 43 28 44" stroke="#c94" stroke-width="1" fill="none"/>
+					   <path d="M42 42 Q46 43 42 44" stroke="#c94" stroke-width="1" fill="none"/>
+				   </svg>
+			   </div>
+		   </main>
+		   <!-- Grass tips overlay (moved outside main) -->
+		   <div class="grass-tips">
+			   <svg viewBox="0 0 100 16" width="100%" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+				   <g>
+					   <path d="M0,16 Q2,8 6,16 Q8,10 12,16 Q14,12 18,16 Q20,8 24,16 Q26,10 30,16 Q32,12 36,16 Q38,8 42,16 Q44,10 48,16 Q50,12 54,16 Q56,8 60,16 Q62,10 66,16 Q68,12 72,16 Q74,8 78,16 Q80,10 84,16 Q86,12 90,16 Q92,8 96,16 Q98,10 100,16" fill="none" stroke="#059669" stroke-width="2.5"/>
+					   <path d="M0,16 Q2,12 4,16 Q6,14 8,16 Q10,12 12,16 Q14,14 16,16 Q18,12 20,16 Q22,14 24,16 Q26,12 28,16 Q30,14 32,16 Q34,12 36,16 Q38,14 40,16 Q42,12 44,16 Q46,14 48,16 Q50,12 52,16 Q54,14 56,16 Q58,12 60,16 Q62,14 64,16 Q66,12 68,16 Q70,14 72,16 Q74,12 76,16 Q78,14 80,16 Q82,12 84,16 Q86,14 88,16 Q90,12 92,16 Q94,14 96,16 Q98,12 100,16" fill="none" stroke="#10b981" stroke-width="1.5"/>
+				   </g>
+			   </svg>
+		   </div>
+
+	</main>
+</body>
+</html>

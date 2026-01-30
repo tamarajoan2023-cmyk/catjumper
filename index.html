@@ -1,0 +1,106 @@
+<!doctype html>
+        <!-- Trunk -->
+        <rect x="26" y="110" width="12" height="60" fill="#7c4a1e"/>
+        <!-- Leaves (bottom) -->
+        <ellipse cx="32" cy="130" rx="28" ry="28" fill="#22c55e"/>
+  <!doctype html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CATJUMPER</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <!-- Sun in the middle top -->
+    <div class="sun-top-center">
+      <svg viewBox="0 0 60 60" width="80" height="80" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="30" cy="30" r="18" fill="#fde047"/>
+        <!-- Sun rays -->
+        <g stroke="#fde047" stroke-width="4">
+          <line x1="30" y1="2" x2="30" y2="16"/>
+          <line x1="30" y1="44" x2="30" y2="58"/>
+          <line x1="2" y1="30" x2="16" y2="30"/>
+          <line x1="44" y1="30" x2="58" y2="30"/>
+          <line x1="12" y1="12" x2="21" y2="21"/>
+          <line x1="48" y1="12" x2="39" y2="21"/>
+          <line x1="12" y1="48" x2="21" y2="39"/>
+          <line x1="48" y1="48" x2="39" y2="39"/>
+        </g>
+      </svg>
+    </div>
+    <!-- Second, bigger tree beside the first -->
+    <div class="tree-left-big">
+      <svg viewBox="0 0 60 180" width="90" height="270" xmlns="http://www.w3.org/2000/svg">
+        <rect x="26" y="110" width="12" height="60" fill="#7c4a1e"/>
+        <ellipse cx="32" cy="130" rx="28" ry="28" fill="#22c55e"/>
+        <ellipse cx="32" cy="90" rx="22" ry="22" fill="#16a34a"/>
+        <ellipse cx="32" cy="52" rx="16" ry="16" fill="#166534"/>
+      </svg>
+    </div>
+    <!-- Tree on the far left -->
+    <div class="tree-left">
+      <svg viewBox="0 0 40 120" width="60" height="180" xmlns="http://www.w3.org/2000/svg">
+        <rect x="16" y="70" width="8" height="40" fill="#8b5c2a"/>
+        <ellipse cx="20" cy="80" rx="18" ry="18" fill="#34d399"/>
+        <ellipse cx="20" cy="55" rx="15" ry="15" fill="#10b981"/>
+        <ellipse cx="20" cy="32" rx="12" ry="12" fill="#059669"/>
+      </svg>
+    </div>
+    </svg>
+  </div>
+  <div class="cloud cloud-right">
+    <svg viewBox="0 0 60 28" width="90" height="42" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="18" cy="22" rx="18" ry="10" fill="#fff"/>
+      <ellipse cx="36" cy="16" rx="16" ry="12" fill="#fff"/>
+      <ellipse cx="50" cy="22" rx="10" ry="8" fill="#fff"/>
+    </svg>
+  </div>
+  <main class="center">
+    <h1 class="title">CATJUMPER</h1>
+
+    <div class="cat-wrap">
+      <svg class="pixel-cat" viewBox="0 0 120 80" xmlns="http://www.w3.org/2000/svg">
+        <!-- Tail -->
+        <ellipse cx="100" cy="60" rx="18" ry="6" fill="#b0b6bb" transform="rotate(-20 100 60)"/>
+        <!-- Tail stripes -->
+        <path d="M90 60 Q95 58 100 60" stroke="#6c6f73" stroke-width="2" fill="none"/>
+        <path d="M105 62 Q110 64 115 60" stroke="#6c6f73" stroke-width="2" fill="none"/>
+        <!-- Body -->
+        <ellipse cx="60" cy="50" rx="35" ry="22" fill="#d3d7db"/>
+        <!-- Body stripes -->
+        <path d="M45 45 Q60 40 75 45" stroke="#6c6f73" stroke-width="3" fill="none"/>
+        <path d="M50 55 Q60 50 70 55" stroke="#6c6f73" stroke-width="2" fill="none"/>
+        <path d="M55 65 Q60 60 65 65" stroke="#6c6f73" stroke-width="2" fill="none"/>
+        <!-- Back leg -->
+        <ellipse cx="85" cy="70" rx="10" ry="6" fill="#b0b6bb"/>
+        <!-- Front leg -->
+        <ellipse cx="45" cy="72" rx="8" ry="5" fill="#b0b6bb"/>
+        <!-- Head -->
+        <ellipse cx="35" cy="35" rx="18" ry="15" fill="#d3d7db"/>
+        <!-- Head stripes -->
+        <path d="M28 28 Q35 25 42 28" stroke="#6c6f73" stroke-width="2" fill="none"/>
+        <path d="M32 34 Q35 32 38 34" stroke="#6c6f73" stroke-width="1.5" fill="none"/>
+        <!-- Left ear -->
+        <polygon points="22,25 28,10 34,28" fill="#b0b6bb"/>
+        <!-- Right ear -->
+        <polygon points="48,25 42,10 36,28" fill="#b0b6bb"/>
+        <!-- Eyes -->
+        <ellipse cx="30" cy="36" rx="2.2" ry="3" fill="#222"/>
+        <ellipse cx="40" cy="36" rx="2.2" ry="3" fill="#222"/>
+        <!-- Nose -->
+        <ellipse cx="35" cy="42" rx="1.2" ry="1" fill="#c94"/>
+        <!-- Mouth -->
+        <path d="M34 44 Q35 46 36 44" stroke="#c94" stroke-width="1" fill="none"/>
+        <!-- Whiskers -->
+        <path d="M28 42 Q24 43 28 44" stroke="#c94" stroke-width="1" fill="none"/>
+        <path d="M42 42 Q46 43 42 44" stroke="#c94" stroke-width="1" fill="none"/>
+      </svg>
+      <div class="play-wrap">
+        <a href="game.html" class="play-button" role="button" aria-label="Play">PLAY</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
